@@ -15,57 +15,24 @@
       --muted:#9ca3af;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:'Inter',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-    header{
-      padding:20px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:rgba(2,6,23,0.9);
-      backdrop-filter:blur(10px);
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+    header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(2,6,23,0.9);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10;}
     header h1{color:var(--accent);font-size:24px}
-    nav a{
-      margin-left:20px;
-      text-decoration:none;
-      color:var(--text);
-      font-weight:500;
-      transition:0.3s;
-    }
+    nav a{margin-left:20px;text-decoration:none;color:var(--text);font-weight:500;transition:0.3s;}
     nav a:hover{color:var(--accent)}
     main{padding:50px 8%}
     h2{font-size:40px;margin-bottom:20px}
     p{color:var(--muted);margin-bottom:20px;font-size:17px}
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-    .card{
-      background:var(--card);
-      border-radius:15px;
-      padding:20px;
-      transition:0.3s;
-    }
-    .card:hover{transform:translateY(-6px)}
-    footer{
-      padding:40px 8%;
-      border-top:1px solid #1f2933;
-      text-align:center;
-      color:var(--muted);
-      margin-top:50px;
-    }
+    .btn-group{display:flex;gap:15px;margin-bottom:30px;flex-wrap:wrap;}
+    .btn{padding:12px 20px;background:var(--accent);border:none;border-radius:12px;color:#020617;font-weight:600;cursor:pointer;transition:0.3s;}
+    .btn:hover{background:var(--accent2);}
+    .guide-section{margin-bottom:50px;background:var(--card);padding:25px;border-radius:15px;}
+    .step{margin-bottom:15px;padding:10px;background:#1f2933;border-radius:10px;}
+    .step h4{margin-bottom:8px;color:var(--accent);}
+    .step p{color:var(--muted);font-size:15px;}
   </style>
 </head>
 <body>
-
 <header>
   <h1>HandMade Studio</h1>
   <nav>
@@ -76,36 +43,212 @@
     <a href="derevo.html">Дерево</a>
   </nav>
 </header>
-
 <main>
-  <h2>В'язання</h2>
-  <p>В'язання – це мистецтво створювати вироби за допомогою спиць або гачка. Від легких аксесуарів до теплих светрів та декору для дому.</p>
-
-  <h3>Популярні техніки</h3>
-  <div class="grid">
-    <div class="card"><h4>Спиці</h4><p>Класичне в'язання на двох або чотирьох спицях.</p></div>
-    <div class="card"><h4>Гачок</h4><p>В'язання гачком – ажурні серветки, пледи, іграшки.</p></div>
-    <div class="card"><h4>Машинне в'язання</h4><p>Використання в'язальної машини для великих проектів.</p></div>
+  <h2>Інструкції з В'язання</h2>
+  <p>Всі інструкції відразу доступні на сторінці. Кнопки служать лише для швидкої навігації до потрібного розділу.</p>
+  <div class="btn-group">
+    <button class="btn" data-target="spicy">В'язання спицями</button>
+    <button class="btn" data-target="gachok">В'язання гачком</button>
+    <button class="btn" data-target="machine">Машинне в'язання</button>
   </div>
 
-  <h3>Матеріали</h3>
-  <div class="grid">
-    <div class="card"><h4>Пряжа</h4><p>Натуральна, синтетична, змішана – вибір залежить від виробу.</p></div>
-    <div class="card"><h4>Спиці</h4><p>Дерев'яні, металеві, пластикові – різні розміри для різних проектів.</p></div>
-    <div class="card"><h4>Гачки</h4><p>Різного діаметру для тонких і товстих ниток.</p></div>
+  <div id="spicy" class="guide-section">
+    <h3>В'язання спицями</h3>
+    <div class="step">
+      <h4>Крок 1: Вибір спиць та нитки</h4>
+      <p>Виберіть пряжу відповідної товщини та спиці. Тонкі нитки – тонкі спиці, товсті нитки – товсті спиці.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 2: Набір петель</h4>
+      <p>Наберіть необхідну кількість петель для вашого виробу. Від цього залежить ширина виробу.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 3: Лицьові та виворітні петлі</h4>
+      <p>Вивчіть лицьові та виворітні петлі. Це основа будь-якого виробу.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 4: Закінчення роботи</h4>
+      <p>Закрийте петлі рівномірно. Прикрасьте або додайте декоративні елементи.</p>
+    </div>
   </div>
 
-  <h3>Корисні поради</h3>
-  <ul style="margin-left:20px;margin-bottom:20px;color:var(--muted)">
-    <li>Починайте з простих візерунків, щоб зрозуміти техніку.</li>
-    <li>Обирайте правильний розмір спиць або гачка для вашої пряжі.</li>
-    <li>Не забувайте робити пробний зразок перед основним проектом.</li>
-  </ul>
+  <div id="gachok" class="guide-section">
+    <h3>В'язання гачком</h3>
+    <div class="step">
+      <h4>Крок 1: Вибір гачка та нитки</h4>
+      <p>Виберіть гачок відповідного діаметра. Для тонкої пряжі – маленький гачок, для товстої – великий.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 2: Початковий вузол</h4>
+      <p>Зробіть вузол і наберіть перший ланцюжок петель.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 3: Основні стовпчики</h4>
+      <p>Вивчіть стовпчики без накиду та з накидом. Це база для більшості виробів.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 4: Створення візерунків</h4>
+      <p>Комбінуйте різні стовпчики для ажурних або об'ємних візерунків.</p>
+    </div>
+  </div>
+
+  <div id="machine" class="guide-section">
+    <h3>Машинне в'язання</h3>
+    <div class="step">
+      <h4>Крок 1: Підготовка машини</h4>
+      <p>Очистіть і змастіть машину, перевірте натяг нитки.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 2: Набір петель</h4>
+      <p>Зробіть базовий набір петель на машині відповідно до вашого виробу.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 3: В'язання виробу</h4>
+      <p>Налаштуйте візерунок та швидкість, слідкуйте за рівністю рядів.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 4: Завершення</h4>
+      <p>Зніміть виріб, закрийте петлі, обріжте нитку та закріпіть кінці.</p>
+    </div>
+  </div>
+
 </main>
+<footer>© 2026 HandMade Studio • В'язання</footer>
+<script>
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.getAttribute('data-target'));
+      target.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>В'язання — HandMade Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --accent:#38bdf8;
+      --accent2:#22c55e;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+    header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(2,6,23,0.9);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10;}
+    header h1{color:var(--accent);font-size:24px}
+    nav a{margin-left:20px;text-decoration:none;color:var(--text);font-weight:500;transition:0.3s;}
+    nav a:hover{color:var(--accent)}
+    main{padding:50px 8%}
+    h2{font-size:40px;margin-bottom:20px}
+    p{color:var(--muted);margin-bottom:20px;font-size:17px}
+    .btn-group{display:flex;gap:15px;margin-bottom:30px;flex-wrap:wrap;}
+    .btn{padding:12px 20px;background:var(--accent);border:none;border-radius:12px;color:#020617;font-weight:600;cursor:pointer;transition:0.3s;}
+    .btn:hover{background:var(--accent2);}
+    .guide-section{margin-bottom:50px;background:var(--card);padding:25px;border-radius:15px;}
+    .step{margin-bottom:15px;padding:10px;background:#1f2933;border-radius:10px;}
+    .step h4{margin-bottom:8px;color:var(--accent);}
+    .step p{color:var(--muted);font-size:15px;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>HandMade Studio</h1>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="vyazannya.html">В'язання</a>
+    <a href="vyshyvka.html">Вишивка</a>
+    <a href="dekupazh.html">Декупаж</a>
+    <a href="derevo.html">Дерево</a>
+  </nav>
+</header>
+<main>
+  <h2>Інструкції з В'язання</h2>
+  <p>Всі інструкції відразу доступні на сторінці. Кнопки служать лише для швидкої навігації до потрібного розділу.</p>
+  <div class="btn-group">
+    <button class="btn" data-target="spicy">В'язання спицями</button>
+    <button class="btn" data-target="gachok">В'язання гачком</button>
+    <button class="btn" data-target="machine">Машинне в'язання</button>
+  </div>
 
-<footer>
-  © 2026 HandMade Studio • В'язання
-</footer>
+  <div id="spicy" class="guide-section">
+    <h3>В'язання спицями</h3>
+    <div class="step">
+      <h4>Крок 1: Вибір спиць та нитки</h4>
+      <p>Виберіть пряжу відповідної товщини та спиці. Тонкі нитки – тонкі спиці, товсті нитки – товсті спиці.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 2: Набір петель</h4>
+      <p>Наберіть необхідну кількість петель для вашого виробу. Від цього залежить ширина виробу.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 3: Лицьові та виворітні петлі</h4>
+      <p>Вивчіть лицьові та виворітні петлі. Це основа будь-якого виробу.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 4: Закінчення роботи</h4>
+      <p>Закрийте петлі рівномірно. Прикрасьте або додайте декоративні елементи.</p>
+    </div>
+  </div>
 
+  <div id="gachok" class="guide-section">
+    <h3>В'язання гачком</h3>
+    <div class="step">
+      <h4>Крок 1: Вибір гачка та нитки</h4>
+      <p>Виберіть гачок відповідного діаметра. Для тонкої пряжі – маленький гачок, для товстої – великий.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 2: Початковий вузол</h4>
+      <p>Зробіть вузол і наберіть перший ланцюжок петель.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 3: Основні стовпчики</h4>
+      <p>Вивчіть стовпчики без накиду та з накидом. Це база для більшості виробів.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 4: Створення візерунків</h4>
+      <p>Комбінуйте різні стовпчики для ажурних або об'ємних візерунків.</p>
+    </div>
+  </div>
+
+  <div id="machine" class="guide-section">
+    <h3>Машинне в'язання</h3>
+    <div class="step">
+      <h4>Крок 1: Підготовка машини</h4>
+      <p>Очистіть і змастіть машину, перевірте натяг нитки.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 2: Набір петель</h4>
+      <p>Зробіть базовий набір петель на машині відповідно до вашого виробу.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 3: В'язання виробу</h4>
+      <p>Налаштуйте візерунок та швидкість, слідкуйте за рівністю рядів.</p>
+    </div>
+    <div class="step">
+      <h4>Крок 4: Завершення</h4>
+      <p>Зніміть виріб, закрийте петлі, обріжте нитку та закріпіть кінці.</p>
+    </div>
+  </div>
+
+</main>
+<footer>© 2026 HandMade Studio • В'язання</footer>
+<script>
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.getAttribute('data-target'));
+      target.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
 </body>
 </html>
