@@ -57,7 +57,14 @@
       text-align: center;
       padding: 20px;
     }
-  </style>
+  @keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+section, .card {
+  animation: fadeUp 0.8s ease forwards;
+}
+</style>
 </head>
 <body>
 
@@ -67,9 +74,10 @@
 </header>
 
 <nav>
-  <a href="#about">Про рукоділля</a>
-  <a href="#types">Види</a>
-  <a href="#ideas">Ідеї</a>
+  <a href="index.html">Головна</a>
+  <a href="vishivka.html">Вишивка</a>
+  <a href="vyazannya.html">В'язання</a>
+  <a href="biser.html">Бісер</a>
   <a href="#contact">Контакти</a>
 </nav>
 
@@ -84,12 +92,12 @@
 <section id="types">
   <h2>Популярні види рукоділля</h2>
   <div class="cards">
-    <div class="card">🧵 Вишивка</div>
-    <div class="card">🪡 В'язання</div>
+    <div class="card">🧵 Вишивка<br><img src="https://images.unsplash.com/photo-1602526216434-6a0a90a962f8" style="width:100%;border-radius:10px"></div>
+    <div class="card">🪡 В'язання<br><img src="https://images.unsplash.com/photo-1616627983415-2c0eec2206f4" style="width:100%;border-radius:10px"></div>
     <div class="card">✂️ Шиття</div>
     <div class="card">🕯️ Свічки ручної роботи</div>
     <div class="card">🎨 Декор та хендмейд</div>
-    <div class="card">📿 Бісероплетіння</div>
+    <div class="card">📿 Бісероплетіння<br><img src="https://images.unsplash.com/photo-1622473590919-37b06f9f9a1f" style="width:100%;border-radius:10px"></div>
   </div>
 </section>
 
